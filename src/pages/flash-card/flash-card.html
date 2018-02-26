@@ -1,0 +1,43 @@
+<ion-header>
+	<ion-navbar hideBackButton>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>form-表单</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<form nz-form [formGroup]="validateForm" (ngSubmit)="_submitForm()">
+		<div nz-form-item class="login-form">
+		  <div nz-form-control [nzValidateStatus]="validateForm.controls.userName">
+			<nz-input formControlName="userName" [nzPlaceHolder]="'Username'" [nzSize]="'large'" style="height:50px">
+			  <ng-template #prefix>
+				<i class="anticon anticon-user"></i>
+			  </ng-template>
+			</nz-input>
+			<div nz-form-explain *ngIf="validateForm.controls.userName.dirty&&validateForm.controls.userName.hasError('required')">Please input your username!</div>
+		  </div>
+		</div>
+		<div nz-form-item>
+		  <div nz-form-control [nzValidateStatus]="validateForm.controls.password">
+			<nz-input style="height:50px" formControlName="password" [nzType]="'password'" [nzPlaceHolder]="'Password'" [nzSize]="'large'">
+			  <ng-template #prefix>
+				<i class="anticon anticon-lock"></i>
+			  </ng-template>
+			</nz-input>
+			<div nz-form-explain *ngIf="validateForm.controls.password.dirty&&validateForm.controls.password.hasError('required')">Please input your Password!</div>
+		  </div>
+		</div>
+		<div nz-form-item>
+		  <div nz-form-control>
+			<label nz-checkbox formControlName="remember">
+			  <span>Remember me</span>
+			</label>
+			<a class="login-form-forgot" class="login-form-forgot">Forgot password</a>
+			<button ion-button full  style="height:40px">Log in</button>
+			Or
+			<a href="">register now!</a>
+		  </div>
+		</div>
+	  </form>
+</ion-content>

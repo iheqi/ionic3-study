@@ -1,0 +1,52 @@
+<ion-header *ngIf="header">
+  
+  <ion-navbar [style.opacity]="myOpacity" color="danger" hideBackButton no-lines>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding fullscreen (ionScroll)="check()">
+
+  <!-- <button ion-button style="position: fixed;top: 50%;">
+      绝对定位
+  </button> -->
+
+  <button ion-button menuToggle full>
+      Toggle Menu
+  </button>
+  <button ion-button (click)="dismiss()" full>dismiss</button>
+  <button ion-button (click)="goHome()" full>GoLogin</button>
+  
+    <h4>Research on the Development Technology of Cross Platform Hybrid Mobile Application Based on HTML5</h4> 
+
+<p>
+Abstract—Because there are many differences in the different operating systems of intelligent equipment, application software adaptation workload will be multiplied. Based on HTML5 cross platform development framework, such as PhoneGap, Sencha Touch, Titanium and AppCan and so on, can easily solve the cross platform problem, reduce software development cycle and the costs of software development and maintenance. This paper mainly introduced PhoneGap, Sencha Touch, Titanium and AppCan cross platform development framework, compared to their advantages and disadvantages, and analyzed the advantages and disadvantages of cross platform mobile hybrid mobile development mode based on HTML5.Finally, this paper looked forward to the development of HTML5 and development technology of cross platform hybrid mobile application based on HTML5. 
+
+
+Keywords-cross platform mobile development framework; HTML5 hybrid application; PhoneGap; Sencha Touch; Titanium; AppCan 
+
+
+I. I NTRODUCTION 
+With the development of 4G network technology and mobile Internet, the popularity of mobile intelligent terminal is becoming higher and higher. The latest report which was released by Global well-known research firm Gartner shows that the global smart phone sales reached 1 billion 500 million in 2016, to 2020 the overall mobile phone market is expected to reach 1 billion 900 million [1]. Gartner released the first quarter of 2016 global smartphone market research report shows that in the smart phone operating system market, Android accounted for 84.1%, iOS accounted for 14.8%, Windows Phone, blackberry and other market share are less than 1% [2], the detailed data are shown in Table I. 
+
+
+Each platform has its own development language and software development kit, and it can’t be compatible between different platforms [3]. In order to get more users, the application has to be published for the different versions of different platforms’ terminals. However, the application development of different platforms need to learn new language and environment, which means spending more time and money, and the latter maintenance must be separated which also increases the cost of software development. Therefore, how to make a simple and rapid cross platform adaptation has become a problem to be solved in the mobile applications development. Table II lists the programming languages required for the application development of the mainstream mobile operating system. 
+
+
+II. CLASSIFICATION OF MOBILE APPLICATION 
+
+
+Mainstream applications on mobile devices can be divided into three types: native application (Native App), hybrid application (Hybrid App) and web application (Web App). Native App use a native language in the mobile operating system, such as Java for Android, Objective-C for iOS, to carry out the application code, it is run directly in the mobile operating system, thus the performance and user experience is best, but development work is difficulty and cost is high; Web App is websites viewed on a mobile device in a mobile browser, designed specifically to fit a mobile device screen size, work well on a mobile device and are accessed through a mobile browser, which has a strong dependence on the browser, the user experience is poor, but the development difficulty and cost is low; Hybrid App run a web application through a separate browser kernel WebView which is a native application, so it needn’t depend on the system browser, performance and user experience is good, the development difficulty and cost is low.
+
+The fundamental difference among the three main applications lies in the different design architecture. Figure I shows the comparison of the design architecture of the three applications, and also describes how they access the database or WebService to load the data [4]. 
+
+Among the three applications, only Hybrid App and Web App can cross platform, but access to Web App only in the browser, can’t be called mobile application in the traditional sense, Hybrid App can retain native application user experience as far as possible to cross platform. 
+
+With the development of HTML5, HTML5 cross platform characteristics allow hybrid application development advantages to further expand. Compared with the traditional native application development, cross platform hybrid mobile application development technology based on HTML5 is known for its cross platform, low cost and easy development, it is favored by many developers. 
+  </p>
+</ion-content>

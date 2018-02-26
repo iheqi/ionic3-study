@@ -1,0 +1,62 @@
+<ion-header>
+
+  <ion-navbar color="danger" hideBackButton no-lines>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      分类
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<ion-grid no-padding>
+      <ion-row>
+     
+      <ion-col col-4 no-padding>
+<!--  (click)="categoryLeftClick(i);getCategoryDetailData(item.typeNumber);"> -->
+          <!-- <button ion-item style="font-size: 11px" no-lines color="primary" full text-left *ngFor="let item of categoryData, let i = index; "> -->
+            <ion-content style="height:100%">
+              <ion-list no-lines>
+                <button ion-item *ngFor="let item of categoryData;let i = index; " style="font-size: 11px" 
+                color="primary" (click)="choosed(i)" id={{i}}>
+                  {{item.name}}
+                </button>
+              </ion-list>
+            </ion-content>  	
+      </ion-col>
+
+      <ion-col>
+      	<ion-content style="height: 100%">
+      	<ion-row>
+            <button ion-item>
+              <img src="assets/img/photo/1.png" style="width: 100%">
+
+            </button>
+            <button ion-item>
+              <img src="assets/img/photo/1.png" style="width: 100%">
+
+            </button>
+            <button ion-item>
+              <img src="assets/img/photo/1.png" style="width: 100%">
+
+            </button>
+      
+            <button ion-item>
+              <img src="assets/img/photo/1.png" style="width: 100%">
+
+            </button>
+            <button ion-item>
+              <img src="assets/img/photo/1.png" style="width: 100%">
+
+            </button>
+        </ion-row>
+    	</ion-content>
+      </ion-col>
+
+      </ion-row>
+    </ion-grid>
+</ion-content>

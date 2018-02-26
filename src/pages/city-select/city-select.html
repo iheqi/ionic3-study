@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="danger" hideBackButton mode="md">
+  	<button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      city-select
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+	<ion-item>
+        <ion-label><b> Simple Picker </b></ion-label>
+        <ion-multi-picker item-content [multiPickerColumns]="simpleColumns"></ion-multi-picker>
+    </ion-item>
+
+    <ion-item>
+        <ion-label><b> Simple Picker </b></ion-label>
+        <ion-multi-picker item-content [multiPickerColumns]="dependentColumns" cancelText="取消" doneText="确定"></ion-multi-picker>
+    </ion-item>
+
+    <ion-item>
+        <ion-label><b>禁用的选择器</b></ion-label>
+        <ion-multi-picker item-content [multiPickerColumns]="dependentColumns" [disabled]="true"></ion-multi-picker>
+    </ion-item>
+  </ion-list>
+</ion-content>

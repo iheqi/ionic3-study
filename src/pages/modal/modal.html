@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-navbar hideBackButton color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>
+			customModal
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+	<ion-fab right bottom>
+    	<button
+            [ngClass]="{ 'expand' : expanded, 'contract': contracted }"
+            ion-fab mini
+            (click)="expand()">
+      		<ion-icon *ngIf="showIcon" name="ios-arrow-forward"></ion-icon>
+    	</button>
+  </ion-fab>
+</ion-content>

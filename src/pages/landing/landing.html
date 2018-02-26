@@ -1,0 +1,20 @@
+<ion-slides pager effect="coverflow">
+  
+   <ion-slide>
+     <img src="assets/img/photo/1.jpg"/>
+   </ion-slide>
+  
+   <ion-slide>
+     <img src="assets/img/photo/2.jpg"/>
+   </ion-slide>
+  
+   <ion-slide>
+     <img src="assets/img/photo/3.jpg"/>
+   </ion-slide>
+  
+   <ion-slide [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}" id="bg">
+   
+    <button light (click)="goHome()" ion-button outline color="secondary">立即启动</button>
+   </ion-slide>
+  
+ </ion-slides>

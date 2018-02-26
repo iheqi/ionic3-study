@@ -1,0 +1,29 @@
+<ion-content class="content" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+
+	<button ion-button navPop clear>
+    <ion-icon name="md-arrow-round-back"></ion-icon> 
+  </button>
+
+
+		<ion-list justify-content-center row-8>
+			<ion-col justify-content-center>
+				<img src="assets/img/logo/logo-mailchimp.png" style="width: 150px; height: 150px">
+			</ion-col>
+		</ion-list>
+		<ion-list inset>
+			<ion-item>
+				<ion-label>帐号</ion-label>
+				<ion-input type="text"></ion-input>
+			</ion-item>		
+			<ion-item>
+				<ion-label>密码</ion-label>
+				<ion-input type="password"></ion-input>
+			</ion-item>
+		</ion-list>
+        <ion-list>
+        	<button ion-button class="login-button">登录</button>
+    	</ion-list>
+    	<ion-list>
+      			<ion-note>没有帐号？立即注册</ion-note>
+    	</ion-list>		
+</ion-content>

@@ -1,0 +1,50 @@
+
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>forget</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list no-lines>
+        <ion-item text-center>
+          <img src="assets/img/logo/logo-mailchimp.png" style="width:130px;height:130px">
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item>
+            <ion-input type="number" placeholder="手机号"  [(ngModel)]="info.usertel">
+            </ion-input>
+            <button item-right ion-button round (click)="getCode()"
+             color="secondary" style="color:black"  [disabled]="verifyCode.disable">
+              {{verifyCode.verifyCodeTips}}
+            </button>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="number" placeholder="验证码"  [(ngModel)]="info.vcode"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type={{type}} placeholder="密码" [(ngModel)]="info.newpass"></ion-input>
+            <button ion-button item-right clear (click)="toggle()" no-padding>
+              <ion-icon name={{eye}} id="eye"></ion-icon>
+            </button>
+        </ion-item>
+        <ion-item>
+            <ion-input type="password"  placeholder="确认密码" [(ngModel)]="info.sure_pwd">
+            </ion-input>
+        </ion-item>
+        
+        <button ion-button full round (click)="doReset()" color="secondary" style="color:black">
+          重置
+        </button>
+        <button ion-button full round color="secondary" style="color:black" navPop>
+          返回
+        </button>
+        
+      </ion-list>
+
+</ion-content>

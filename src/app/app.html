@@ -1,0 +1,21 @@
+<ion-menu [content]="myNav" persistent="true">
+	<ion-header>
+		<ion-toolbar>
+			<ion-title>
+				<h2>菜单</h2>
+			</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-content>
+		<ion-list>
+			<button ion-item clear full *ngFor="let p of pages" (click)="openPage(p)">
+				{{p.title}}
+			</button>
+		</ion-list>
+		<button ion-button (click)="query()">test</button>
+	</ion-content>
+</ion-menu>
+
+
+<ion-nav #myNav [root]="rootPage"></ion-nav>

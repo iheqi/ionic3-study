@@ -1,0 +1,77 @@
+.ios, .md {
+    
+       page-clip-path {
+    
+           .scroll-content {
+               margin-top: 0 !important;
+           }
+    
+           ion-header {
+               backdrop-filter: blur(8px);
+           }
+    
+           ion-navbar {
+               opacity: 0.6;
+               box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.77);
+           }
+    
+           ion-list {
+    
+               margin: 0;
+    
+               .item, .item-inner, ion-label {
+                   background-color: #cecece;
+                   padding: 0 !important;
+                   margin: 0;
+               }
+    
+           }
+    
+           .trash {
+               animation: myTransition 0.75s cubic-bezier(0.25, 0.79, 0.41, 1.15);      
+              /* 过渡函数，有如下几种：liner ：匀速 
+                                        ease-in：减速 
+                                            ease-out：加速 
+                                      ease-in-out：先加速再减速 
+                                        cubic-bezier：三次贝塞尔曲线 */
+
+               animation-fill-mode: forwards;  /*  定义动画开始之前和结束之后发生的操作，
+               默认值为none，动画结束时回到动画没开始时的状态；
+               forwards，动画结束后继续应用最后关键帧的位置，即保存在结束状态；
+               backwards，让动画回到第一帧的状态；
+               both：轮流应用forwards和backwards规则。 */
+           }
+           .untrash{
+                animation: unTransition 0.75s cubic-bezier(0.25, 0.79, 0.41, 1.15);;
+                animation-fill-mode: forwards;
+           }
+           .trashs{
+            margin: 0;
+           }
+    
+       }
+    
+   }
+    
+   @keyframes myTransition {
+       from {
+           opacity: 1;
+           clip-path: polygon(0 0, 0% 20%, 0 50%, 0 100%, 20% 100%, 50% 100%, 80% 100%, 100% 100%, 100% 50%, 100% 20%, 100% 0, 50% 0);
+       }
+       to {
+           opacity: 0.5;
+           clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+       }
+   }
+
+   @keyframes unTransition {
+    
+       from {
+        opacity: 0.5;
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+       }
+       to {
+        opacity: 1;
+        clip-path: polygon(0 0, 0% 20%, 0 50%, 0 100%, 20% 100%, 50% 100%, 80% 100%, 100% 100%, 100% 50%, 100% 20%, 100% 0, 50% 0);
+       }
+   }

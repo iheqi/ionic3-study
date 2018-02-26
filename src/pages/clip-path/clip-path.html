@@ -1,0 +1,25 @@
+<ion-header no-border>
+    <ion-navbar color="light" hideBackButton>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        <ion-title>
+          css 剪辑路径
+        </ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="trash()">
+                <ion-icon name="trash"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+  
+        <button [class.trashs]="image.toBeDeleted" ion-item
+         (click)="toggleImgDelete(image)" *ngFor="let image of images">
+            <img [ngClass]="{'trash':image.toBeDeleted,'untrash':!image.toBeDeleted}" [src]="image.imagePath"/>
+        </button>
+
+        <button ion-button (click)="test()">change</button>
+</ion-content>

@@ -1,0 +1,14 @@
+<ion-content>
+  
+     <ion-grid>
+         <ion-row>
+             <ion-col col-2 *ngFor="let icon of icons;let i=index;">
+                 <button (click)="dismiss()" ion-button small round icon-only>
+                   <ion-icon name={{icon.name}}></ion-icon>
+                  </button>
+             </ion-col>
+
+         </ion-row>
+     </ion-grid>
+  
+ </ion-content>
