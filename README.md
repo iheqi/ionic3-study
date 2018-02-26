@@ -30,11 +30,11 @@ Misc:
 
     backend : pro
 
-screenshot:
+部分截图（assets/screenshoot）:
 ![1](https://github.com/iheqi/ionic3-study/blob/master/src/assets/screenshot/Screenshot_2018-02-26-17-19-57.png)
 ![2](https://github.com/iheqi/ionic3-study/blob/master/src/assets/screenshot/Screenshot_2018-02-26-17-20-28.png)
 ![3](https://github.com/iheqi/ionic3-study/blob/master/src/assets/screenshot/Screenshot_2018-02-26-17-20-39.png)
 ![4](https://github.com/iheqi/ionic3-study/blob/master/src/assets/screenshot/Screenshot_2018-02-26-17-20-55.png)
-![5](https://github.com/iheqi/ionic3-study/blob/master/src/assets/screenshot/Screenshot_2018-02-26-17-20-42.png)
+![5](https://github.com/iheqi/ionic3-study/blob/master/src/assets/screenshot/Screenshot_2018-02-26-17-21-42.png)
 
 
